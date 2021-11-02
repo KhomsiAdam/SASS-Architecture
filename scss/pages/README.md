@@ -1,0 +1,3 @@
+# Pages
+
+In the `scss/pages/` folder, you group page-specific stylesheets that can or not be partials. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `scss/pages/` as an example. If they are partials they should be imported into the `scss/main.scss` file, if not their resulted compiled CSS stylesheets should be linked in their respective pages.

@@ -1,0 +1,69 @@
+// Abstracts
+@use "abstracts" as *;
+// Base
+@use "base" as *;
+// Components
+// @use "components" as *;
+// Layouts
+// @use "layouts" as *;
+
+// ============================== //
+// Export variables to JavaScript //
+// ============================== //
+// Load the SASS variables that you want into the body::after's content into a JSON format to be converted to a JS object
+body.load-variables {
+    &::after {
+        position: absolute;
+        visibility: hidden;
+        font-size: 0;
+        z-index: -1;
+        // Name the object keys the names you want to use in JavaScript, access the variables values with the var() function with interpolation
+        // To format the CSS content property in a readable format, the use of a backlash '\' at the end of each line make it possible to break strings
+        content:
+            '{\
+                "colors": {\
+                    "p_green": "#{var($colors, "primary", "green")}",\
+                    "p_blue": "#{var($colors, "primary", "blue")}",\
+                    "s_yellow": "#{var($colors, "secondary", "yellow")}",\
+                    "s_red": "#{var($colors, "secondary", "red")}",\
+                    "n_black": "#{var($colors, "neutral","black")}",\
+                    "n_darkgray": "#{var($colors, "neutral","darkgray")}",\
+                    "n_gray": "#{var($colors, "neutral","gray")}",\
+                    "n_lightgray": "#{var($colors, "neutral","lightgray")}",\
+                    "n_white": "#{var($colors, "neutral","white")}"\
+                },\
+                "font_weight": {\
+                    "thin": "#{var($font-weight, "thin")}",\
+                    "extralight": "#{var($font-weight, "extralight")}",\
+                    "light": "#{var($font-weight, "light")}",\
+                    "regular": "#{var($font-weight, "regular")}",\
+                    "medium": "#{var($font-weight, "medium")}",\
+                    "semibold": "#{var($font-weight, "semibold")}",\
+                    "bold": "#{var($font-weight, "bold")}",\
+                    "extrabold": "#{var($font-weight, "extrabold")}",\
+                    "blackbold": "#{var($font-weight, "blackbold")}"\
+                },\
+                "breakpoints": {\
+                    "320": "#{var($breakpoints, "320")}",\
+                    "360": "#{var($breakpoints, "360")}",\
+                    "375": "#{var($breakpoints, "375")}",\
+                    "425": "#{var($breakpoints, "425")}",\
+                    "768": "#{var($breakpoints, "768")}",\
+                    "800": "#{var($breakpoints, "800")}",\
+                    "900": "#{var($breakpoints, "900")}",\
+                    "1024": "#{var($breakpoints, "1024")}",\
+                    "1280": "#{var($breakpoints, "1280")}",\
+                    "1366": "#{var($breakpoints, "1366")}",\
+                    "1440": "#{var($breakpoints, "1440")}",\
+                    "1600": "#{var($breakpoints, "1600")}",\
+                    "1680": "#{var($breakpoints, "1680")}",\
+                    "1920": "#{var($breakpoints, "1920")}",\
+                    "2560": "#{var($breakpoints, "2560")}"\
+                }\
+            }';
+    }
+}
+
+/* ======== */
+/* Main CSS */
+/* ======== */

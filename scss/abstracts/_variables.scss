@@ -1,0 +1,79 @@
+@use "functions" as *;
+// ======================== //
+// Prefixes for class names //
+// ======================== //
+$prefix: "ss-";
+// ========= //
+// Font name //
+// ========= //
+$font-name: "Raleway";
+$font-serif: "sans-serif";
+// ============ //
+// Font weights //
+// ============ //
+$font-weight: (
+    "thin": 100,
+    "extralight": 200,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700,
+    "extrabold": 800,
+    "blackbold": 900,
+);
+// ====== //
+// Colors //
+// ====== //
+$colors: (
+    // Main colors
+    primary:
+        (
+            "green": #008f70,
+            "blue": #2b777d,
+        ),
+    // Secondary colors
+    secondary:
+        (
+            "lightgreen": #5fbe6e,
+            "darkblue": #2b365a,
+            "lightblue": #5fbebc,
+            "yellow": #bebe5f,
+            "red": #c94242,
+            "purple": #a35fbe,
+        ),
+    // Colors used for gradient
+    gradient: (),
+    // Grayscale/Basic colors
+    neutral:
+        (
+            "black": #000000,
+            "darkgray": #343434,
+            "gray": #837f7f,
+            "lightgray": #f7f7f7,
+            "white": #ffffff,
+        )
+);
+// ========================== //
+// Device breakpoints (width) //
+// ========================== //
+$breakpoints: (
+    // Mobile
+    "320": 320px,
+    "360": 360px,
+    "375": 375px,
+    "425": 425px,
+    // Tablets
+    "768": 768px,
+    "800": 800px,
+    "900": 900px,
+    "1024": 1024px,
+    // Computers (Laptops/Desktops)
+    "1280": 1280px,
+    "1366": 1366px,
+    "1440": 1440px,
+    "1600": 1600px,
+    "1680": 1680px,
+    "1920": 1920px,
+    "2560": 2560px,
+);

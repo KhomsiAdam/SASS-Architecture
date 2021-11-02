@@ -1,0 +1,138 @@
+// Abstracts
+@use "../abstracts/" as *;
+
+/* ========== */
+/* Utilities */
+/* ========== */
+
+/* Container */
+.#{$prefix}container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1280px;
+    @include breakpoint_min("768") {
+        width: 85%;
+    }
+    @include breakpoint_min("1024") {
+        width: 70%;
+    }
+}
+
+/* Video container */
+.#{$prefix}video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+/* Text Alignement */
+/* Left */
+.#{$prefix}left-align {
+    text-align: left;
+}
+/* Right */
+.#{$prefix}right-align {
+    text-align: right;
+}
+/* Center */
+.#{$prefix}center-align {
+    text-align: center;
+}
+
+/* General Alignement */
+/* Flex */
+.#{$prefix}flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.#{$prefix}flex-v-center {
+    display: flex;
+    align-items: center;
+}
+.#{$prefix}flex-h-center {
+    display: flex;
+    justify-content: center;
+}
+/* Grid */
+.#{$prefix}grid-center {
+    display: grid;
+    place-content: center;
+}
+
+/* To round elements as a circle */
+.#{$prefix}circle {
+    border-radius: 50%;
+}
+
+/* Scale transition animation */
+.#{$prefix}scale-transition {
+    transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63);
+}
+
+/* Box shadows */
+.#{$prefix}b-shadow-1 {
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+.#{$prefix}b-shadow-2 {
+    box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 30%);
+}
+.#{$prefix}b-shadow-3 {
+    box-shadow: 0 8px 17px 2px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%), 0 5px 5px -3px rgb(0 0 0 / 20%);
+}
+.#{$prefix}b-shadow-4 {
+    box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -7px rgb(0 0 0 / 20%);
+}
+.#{$prefix}b-shadow-5 {
+    box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);
+}
+
+/* Prevent content from wrapping and forcing it into single line with ellipsis at the end */
+.#{$prefix}ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Removing default appearance */
+.#{$prefix}no-appearance {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Prevent scrolling while the navigation menu is open */
+.#{$prefix}prevent-scroll {
+    overflow: hidden;
+}
+
+/* Overlay */
+.#{$prefix}overlay {
+    width: 100vw;
+    height: 100vh;
+    background: var($colors, neutral, black);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    opacity: 0.8;
+    display: none;
+}
+.#{$prefix}overlay.active {
+    display: block;
+}
+
+/* Table with spacing inside only */
+.#{$prefix}table-inspacing {
+    // Fix for spacing between cells only inside the table
+    td {
+        border: 0px solid transparent;
+        background-clip: padding-box;
+    }
+    tr > td + td {
+        border-left-width: 5px;
+    }
+    tr > td {
+        border-top-width: 5px;
+    }
+}

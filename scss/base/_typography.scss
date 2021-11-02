@@ -1,0 +1,44 @@
+// Abstracts
+@use "../abstracts/" as *;
+
+/* ========== */
+/* Typography */
+/* ========== */
+
+/* Standart mobile first typography */
+@include font-sizes(3.2rem, 2.6rem, 2.2rem, 1.8rem, 1.6rem);
+
+/* Mobile typography fixes for small screens: 320px ~ 360px */
+@include breakpoint-between(var($breakpoints, "320") , var($breakpoints, "360")) {
+    @include font-sizes(3rem, 2.4rem, 2rem, 1.6rem, 1.4rem);
+}
+
+/* Tablet typography: 768px+ */
+@include breakpoint-min(var($breakpoints, "768")) {
+    @include font-sizes(3.2rem, 2.6rem, 2.2rem, 1.8rem, 1.6rem);
+}
+
+/* Tablet typography: 1024px+ */
+@include breakpoint-min(var($breakpoints, "1024")) {
+    @include font-sizes(4rem, 3.2rem, 2.4rem, 1.8rem, 1.6rem);
+}
+
+/* Computer typography: 1280px+ */
+@include breakpoint-min(var($breakpoints, "1280")) {
+    @include font-sizes(4rem, 3.2rem, 2.4rem, 1.8rem, 1.6rem);
+}
+
+/* Computer typography: 1440px+ */
+@include breakpoint-min(var($breakpoints, "1440")) {
+    @include font-sizes(4.4rem, 3.4rem, 2.6rem, 1.8rem, 1.6rem);
+}
+
+/* Computer typography: 1920px+ */
+@include breakpoint-min(var($breakpoints, "1920")) {
+    @include font-sizes(4.8rem, 3.6rem, 2.8rem, 1.8rem, 1.6rem);
+}
+
+/* Computer typography: 2560px+ */
+@include breakpoint-min(var($breakpoints, "2560")) {
+    @include font-sizes(4.8rem, 3.8rem, 3rem, 2rem, 1.8rem);
+}

@@ -1,0 +1,205 @@
+@use "variables" as *;
+@use "placeholders" as *;
+@use "functions" as *;
+
+// ============= //
+// Media Queries //
+// ============= //
+
+// Fixed width breakpoint
+@mixin breakpoint_fixed($size) {
+    @media only screen and (width: $size) {
+        @content;
+    }
+}
+// Min-width breakpoint
+@mixin breakpoint_min($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+// Max-width breakpoint
+@mixin breakpoint_max($size) {
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}
+// Min and Max width breakpoint
+@mixin breakpoint_between($size-min, $size-max) {
+    @media only screen and (min-width: $size-min) and (max-width: $size-max) {
+        @content;
+    }
+}
+
+// ========== //
+// Font sizes //
+// ========== //
+@mixin font-sizes($h1, $h2, $h3, $h4, $p) {
+    $font-sizes: (
+        "h1": $h1,
+        "h2": $h2,
+        "h3": $h3,
+        "h4": $h4,
+        "p": $p,
+    );
+    @each $tag, $size in $font-sizes {
+        @if $tag== "p" {
+            #{$tag},
+            span,
+            strong,
+            label,
+            a,
+            li {
+                font-size: $size;
+            }
+        } @else {
+            #{$tag} {
+                font-size: $size;
+            }
+        }
+    }
+}
+
+// ========= //
+// Font Face //
+// ========= //
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg, $display: swap) {
+    $src: null;
+
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_"),
+    );
+
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype",
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src, local($name);
+        font-display: $display;
+    }
+}
+
+// ============== //
+// Button styling //
+// ============== //
+@mixin button($width, $height, $bg-color, $font-color, $font-size, $font-weight, $border-radius, $border-size, $border-type, $border-color) {
+    width: $width;
+    height: $height;
+    background: $bg-color;
+    color: $text-color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    border-radius: $border-radius;
+    border: $border-size $border-type $border-color;
+    cursor: pointer;
+}
+
+// ================ //
+// Background image //
+// ================ //
+@mixin bg-img($width, $height, $url, $repeat, $size, $position) {
+    width: $width;
+    height: $height;
+    background-image: url($url);
+    background-repeat: $repeat;
+    background-size: $size;
+    background-position: $position;
+}
+
+// ======= //
+// Overlay //
+// ======= //
+@mixin overlay($z-index: -1, $background: linear-gradient(0deg, rgb(0 0 0 / .5), rgb(0 0 0 / 0))) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: $z-index;
+        background: $background;
+    }
+}
+
+// =============== //
+// Gradient Shadow //
+// =============== //
+@mixin gradient-shadow($deg, $color-1, $color-2, $z-index: -1, $blur-1, $blur-2, $blur-opacity: .5) {
+    background: linear-gradient($deg, $color-1, $color-2);
+    position: relative;
+    box-shadow: unset;
+    isolation: isolate;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: $z-index;
+        background: inherit;
+    }
+    &::before {
+        filter: blur($blur-1);
+    }
+    &::after {
+        filter: blur($blur-2);
+        opacity: $blur-opacity;
+    }
+}
+
+// ======== //
+// Flex Box //
+// ======== //
+@mixin flex($justify-content, $align-items: center, $flex-direction: row) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+}
+// ==== //
+// Grid //
+// ==== //
+@mixin grid($columns, $rows, $areas, $gap: 0) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    grid-template-areas: $areas;
+    gap: $gap;
+}
+// ============================== //
+// After & Before pseudo elements //
+// ============================== //
+@mixin pseudo_elem($location: before, $content: "", $position: relative, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+    &:#{$location} {
+        content: $content;
+        position: $position;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+        @content;
+    }
+}
+// For checkboxes and radio buttons
+@mixin pseudo_elem_checked($location: before, $content: "", $position: relative, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+    &:checked:#{$location} {
+        content: $content;
+        position: $position;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+        @content;
+    }
+}

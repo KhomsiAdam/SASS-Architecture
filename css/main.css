@@ -1,0 +1,513 @@
+/* ========= */
+/* Font Face */
+/* ========= */
+/* Thin */
+@font-face {
+  font-family: "Raleway";
+  font-style: "normal";
+  font-weight: 100;
+  src: url("/fonts/Raleway-Thin-100.woff2") format("woff2"), url("/fonts/Raleway-Thin-100.woff") format("woff"), url("/fonts/Raleway-Thin-100.ttf") format("truetype"), local("Raleway");
+  font-display: swap;
+}
+/* Extralight */
+@font-face {
+  font-family: "Raleway";
+  font-style: "normal";
+  font-weight: 200;
+  src: url("/fonts/Raleway-Extralight-200.woff2") format("woff2"), url("/fonts/Raleway-Extralight-200.woff") format("woff"), url("/fonts/Raleway-Extralight-200.ttf") format("truetype"), local("Raleway");
+  font-display: swap;
+}
+/* Light */
+@font-face {
+  font-family: "Raleway";
+  font-style: "normal";
+  font-weight: 300;
+  src: url("/fonts/Raleway-Light-300.woff2") format("woff2"), url("/fonts/Raleway-Light-300.woff") format("woff"), url("/fonts/Raleway-Light-300.ttf") format("truetype"), local("Raleway");
+  font-display: swap;
+}
+/* Regular */
+@font-face {
+  font-family: "Raleway";
+  font-style: "normal";
+  font-weight: 400;
+  src: url("/fonts/Raleway-Regular-400.woff2") format("woff2"), url("/fonts/Raleway-Regular-400.woff") format("woff"), url("/fonts/Raleway-Regular-400.ttf") format("truetype"), local("Raleway");
+  font-display: swap;
+}
+/* Medium */
+@font-face {
+  font-family: "Raleway";
+  font-style: "normal";
+  font-weight: 500;
+  src: url("/fonts/Raleway-Medium-500.woff2") format("woff2"), url("/fonts/Raleway-Medium-500.woff") format("woff"), url("/fonts/Raleway-Medium-500.ttf") format("truetype"), local("Raleway");
+  font-display: swap;
+}
+/* Semibold */
+@font-face {
+  font-family: "Raleway";
+  font-style: "normal";
+  font-weight: 600;
+  src: url("/fonts/Raleway-Semibold-600.woff2") format("woff2"), url("/fonts/Raleway-Semibold-600.woff") format("woff"), url("/fonts/Raleway-Semibold-600.ttf") format("truetype"), local("Raleway");
+  font-display: swap;
+}
+/* Bold */
+@font-face {
+  font-family: "Raleway";
+  font-style: "normal";
+  font-weight: 700;
+  src: url("/fonts/Raleway-Bold-700.woff2") format("woff2"), url("/fonts/Raleway-Bold-700.woff") format("woff"), url("/fonts/Raleway-Bold-700.ttf") format("truetype"), local("Raleway");
+  font-display: swap;
+}
+/* Extrabold */
+@font-face {
+  font-family: "Raleway";
+  font-style: "normal";
+  font-weight: 800;
+  src: url("/fonts/Raleway-Extrabold-800.woff2") format("woff2"), url("/fonts/Raleway-Extrabold-800.woff") format("woff"), url("/fonts/Raleway-Extrabold-800.ttf") format("truetype"), local("Raleway");
+  font-display: swap;
+}
+/* Blackbold */
+@font-face {
+  font-family: "Raleway";
+  font-style: "normal";
+  font-weight: 900;
+  src: url("/fonts/Raleway-Black-900.woff2") format("woff2"), url("/fonts/Raleway-Black-900.woff") format("woff"), url("/fonts/Raleway-Black-900.ttf") format("truetype"), local("Raleway");
+  font-display: swap;
+}
+/* ========== */
+/* Typography */
+/* ========== */
+/* Standart mobile first typography */
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p,
+span,
+strong,
+label,
+a,
+li {
+  font-size: 1.6rem;
+}
+
+/* Mobile typography fixes for small screens: 320px ~ 360px */
+@media only screen and (min-width: 320px) and (max-width: 360px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  p,
+span,
+strong,
+label,
+a,
+li {
+    font-size: 1.4rem;
+  }
+}
+/* Tablet typography: 768px+ */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  p,
+span,
+strong,
+label,
+a,
+li {
+    font-size: 1.6rem;
+  }
+}
+/* Tablet typography: 1024px+ */
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  p,
+span,
+strong,
+label,
+a,
+li {
+    font-size: 1.6rem;
+  }
+}
+/* Computer typography: 1280px+ */
+@media only screen and (min-width: 1280px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  p,
+span,
+strong,
+label,
+a,
+li {
+    font-size: 1.6rem;
+  }
+}
+/* Computer typography: 1440px+ */
+@media only screen and (min-width: 1440px) {
+  h1 {
+    font-size: 4.4rem;
+  }
+
+  h2 {
+    font-size: 3.4rem;
+  }
+
+  h3 {
+    font-size: 2.6rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  p,
+span,
+strong,
+label,
+a,
+li {
+    font-size: 1.6rem;
+  }
+}
+/* Computer typography: 1920px+ */
+@media only screen and (min-width: 1920px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  p,
+span,
+strong,
+label,
+a,
+li {
+    font-size: 1.6rem;
+  }
+}
+/* Computer typography: 2560px+ */
+@media only screen and (min-width: 2560px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 3.8rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  p,
+span,
+strong,
+label,
+a,
+li {
+    font-size: 1.8rem;
+  }
+}
+/* ====== */
+/* Resets */
+/* ====== */
+html {
+  box-sizing: border-box;
+  /* Font family */
+  font-family: "Raleway", "sans-serif";
+  /* To make rem units easier to work with (1rem = 10px) */
+  font-size: 62.5%;
+  /* Scrollbar Styling : Firefox */
+  scrollbar-width: thin;
+  /* Scrollbar Styling for Webkit browsers */
+}
+html::-webkit-scrollbar {
+  width: 1.5rem;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Uncomment if custom outline is planned for each element needed */
+/* :focus {
+     outline: none;
+}*/
+/* Links decoration */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Remove default list styling */
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ========== */
+/* Utilities */
+/* ========== */
+/* Container */
+.ss-container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1280px;
+}
+@media only screen and (min-width: 768) {
+  .ss-container {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 1024) {
+  .ss-container {
+    width: 70%;
+  }
+}
+
+/* Video container */
+.ss-video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Text Alignement */
+/* Left */
+.ss-left-align {
+  text-align: left;
+}
+
+/* Right */
+.ss-right-align {
+  text-align: right;
+}
+
+/* Center */
+.ss-center-align {
+  text-align: center;
+}
+
+/* General Alignement */
+/* Flex */
+.ss-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ss-flex-v-center {
+  display: flex;
+  align-items: center;
+}
+
+.ss-flex-h-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Grid */
+.ss-grid-center {
+  display: grid;
+  place-content: center;
+}
+
+/* To round elements as a circle */
+.ss-circle {
+  border-radius: 50%;
+}
+
+/* Scale transition animation */
+.ss-scale-transition {
+  transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63);
+}
+
+/* Box shadows */
+.ss-b-shadow-1 {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ss-b-shadow-2 {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.ss-b-shadow-3 {
+  box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+.ss-b-shadow-4 {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+}
+
+.ss-b-shadow-5 {
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+/* Prevent content from wrapping and forcing it into single line with ellipsis at the end */
+.ss-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Removing default appearance */
+.ss-no-appearance {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Prevent scrolling while the navigation menu is open */
+.ss-prevent-scroll {
+  overflow: hidden;
+}
+
+/* Overlay */
+.ss-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 15;
+  opacity: 0.8;
+  display: none;
+}
+
+.ss-overlay.active {
+  display: block;
+}
+
+/* Table with spacing inside only */
+.ss-table-inspacing td {
+  border: 0px solid transparent;
+  background-clip: padding-box;
+}
+.ss-table-inspacing tr > td + td {
+  border-left-width: 5px;
+}
+.ss-table-inspacing tr > td {
+  border-top-width: 5px;
+}
+
+body.load-variables::after {
+  position: absolute;
+  visibility: hidden;
+  font-size: 0;
+  z-index: -1;
+  content: '{                "colors": {                    "p_green": "#008f70",                    "p_blue": "#2b777d",                    "s_yellow": "#bebe5f",                    "s_red": "#c94242",                    "n_black": "#000000",                    "n_darkgray": "#343434",                    "n_gray": "#837f7f",                    "n_lightgray": "#f7f7f7",                    "n_white": "#ffffff"                },                "font_weight": {                    "thin": "100",                    "extralight": "200",                    "light": "300",                    "regular": "400",                    "medium": "500",                    "semibold": "600",                    "bold": "700",                    "extrabold": "800",                    "blackbold": "900"                },                "breakpoints": {                    "320": "320px",                    "360": "360px",                    "375": "375px",                    "425": "425px",                    "768": "768px",                    "800": "800px",                    "900": "900px",                    "1024": "1024px",                    "1280": "1280px",                    "1366": "1366px",                    "1440": "1440px",                    "1600": "1600px",                    "1680": "1680px",                    "1920": "1920px",                    "2560": "2560px"                }            }';
+}
+
+/* ======== */
+/* Main CSS */
+/* ======== *//*# sourceMappingURL=main.css.map */
