@@ -302,14 +302,23 @@ html {
   font-size: 62.5%;
   /* Scrollbar Styling : Firefox */
   scrollbar-width: thin;
+  scrollbar-color: #000000 #ffffff;
   /* Scrollbar Styling for Webkit browsers */
 }
 html::-webkit-scrollbar {
   width: 1.5rem;
 }
+html::-webkit-scrollbar-track {
+  background: #000000;
+}
 html::-webkit-scrollbar-thumb {
+  background: #837f7f;
   border-radius: 3px;
 }
+html::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
 *,
 *::before,
 *::after {
@@ -476,6 +485,7 @@ select {
 .ss-overlay {
   width: 100vw;
   height: 100vh;
+  background: #000000;
   position: fixed;
   top: 0;
   right: 0;

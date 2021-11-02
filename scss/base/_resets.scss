@@ -13,20 +13,20 @@ html {
     font-size: 62.5%;
     /* Scrollbar Styling : Firefox */
     scrollbar-width: thin;
-    scrollbar-color: var($colors, neutral, black) var($colors, neutral, white);
+    scrollbar-color: var($colors, "neutral", "black") var($colors, "neutral", "white");
     /* Scrollbar Styling for Webkit browsers */
     &::-webkit-scrollbar {
         width: 1.5rem;
     }
     &::-webkit-scrollbar-track {
-        background: var($colors, neutral, black);
+        background: var($colors, "neutral", "black");
     }
     &::-webkit-scrollbar-thumb {
-        background: var($colors, neutral, black);
+        background: var($colors, "neutral", "gray");
         border-radius: 3px;
     }
     &::-webkit-scrollbar-thumb:hover {
-        background: var($colors, neutral, white);
+        background: var($colors, "neutral", "white");
     }
 }
 
