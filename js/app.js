@@ -5,8 +5,7 @@
 /* Import variables from `scss/abstracts/_variables.scss` from the 'content' property of the body::after pseudo class
 The variables are in a JSON format that gets converted into a JavaScript Object for access */
 import "./modules/variables.js";
-
-// Detection Module
+/* Detection Module */
 // import { elementInView, getElementsInView } from "./modules/detection.js";
 
 // === //

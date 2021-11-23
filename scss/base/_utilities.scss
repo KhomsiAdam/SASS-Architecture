@@ -9,11 +9,11 @@
 .#{$prefix}container {
     margin: 0 auto;
     width: 90%;
-    max-width: 1280px;
-    @include breakpoint_min("768") {
+    max-width: 1920px;
+    @include breakpoint-min(ss-var($breakpoints, "1920")) {
         width: 85%;
     }
-    @include breakpoint_min("1024") {
+    @include breakpoint-min(ss-var($breakpoints, "2560")) {
         width: 70%;
     }
 }
@@ -110,7 +110,7 @@
 .#{$prefix}overlay {
     width: 100vw;
     height: 100vh;
-    background: var($colors, "neutral", "black");
+    background: ss-var($colors, "neutral", "black");
     position: fixed;
     top: 0;
     right: 0;

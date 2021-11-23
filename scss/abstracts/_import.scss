@@ -1,0 +1,58 @@
+@use "variables" as *;
+@use "functions" as *;
+
+/* ============================== */
+/* Export variables to JavaScript */
+/* ============================== */
+/* Load the SASS variables that you want into the body::after's content into a JSON format to be converted to a JS object */
+body.load-variables {
+    &::after {
+        position: absolute;
+        visibility: hidden;
+        font-size: 0;
+        z-index: -1;
+        /* Name the object keys the names you want to use in JavaScript, access the variables values with the ss-var() function with interpolation */
+        /* To format the CSS content property in a readable format, the use of a backlash '\' at the end of each line make it possible to break strings */
+        content:
+            '{\
+                "colors": {\
+                    "p_blue": "#{ss-var($colors, "primary", "blue")}",\
+                    "s_darkblue": "#{ss-var($colors, "secondary", "darkblue")}",\
+                    "s_lightblue": "#{ss-var($colors, "secondary", "lightblue")}",\
+                    "n_black": "#{ss-var($colors, "neutral","black")}",\
+                    "n_darkgray": "#{ss-var($colors, "neutral","darkgray")}",\
+                    "n_gray": "#{ss-var($colors, "neutral","gray")}",\
+                    "n_lightgray": "#{ss-var($colors, "neutral","lightgray")}",\
+                    "n_white": "#{ss-var($colors, "neutral","white")}"\
+                },\
+                "font_weight": {\
+                    "thin": "#{ss-var($font-weight, "thin")}",\
+                    "extralight": "#{ss-var($font-weight, "extralight")}",\
+                    "light": "#{ss-var($font-weight, "light")}",\
+                    "regular": "#{ss-var($font-weight, "regular")}",\
+                    "medium": "#{ss-var($font-weight, "medium")}",\
+                    "semibold": "#{ss-var($font-weight, "semibold")}",\
+                    "bold": "#{ss-var($font-weight, "bold")}",\
+                    "extrabold": "#{ss-var($font-weight, "extrabold")}",\
+                    "blackbold": "#{ss-var($font-weight, "blackbold")}"\
+                },\
+                "breakpoints": {\
+                    "320": "#{ss-var($breakpoints, "320")}",\
+                    "360": "#{ss-var($breakpoints, "360")}",\
+                    "375": "#{ss-var($breakpoints, "375")}",\
+                    "425": "#{ss-var($breakpoints, "425")}",\
+                    "768": "#{ss-var($breakpoints, "768")}",\
+                    "800": "#{ss-var($breakpoints, "800")}",\
+                    "900": "#{ss-var($breakpoints, "900")}",\
+                    "1024": "#{ss-var($breakpoints, "1024")}",\
+                    "1280": "#{ss-var($breakpoints, "1280")}",\
+                    "1366": "#{ss-var($breakpoints, "1366")}",\
+                    "1440": "#{ss-var($breakpoints, "1440")}",\
+                    "1600": "#{ss-var($breakpoints, "1600")}",\
+                    "1680": "#{ss-var($breakpoints, "1680")}",\
+                    "1920": "#{ss-var($breakpoints, "1920")}",\
+                    "2560": "#{ss-var($breakpoints, "2560")}"\
+                }\
+            }';
+    }
+}

@@ -8,7 +8,7 @@ The `scss/abstracts/` folder gathers all SASS helpers used across the project. V
 
 `scss/abstracts/_functions.scss` contains all your functions.
 
-The `var($variable, $keys...)` function is used to access sass maps and nested maps values easily.
+The `ss-var($variable, $keys...)` function is used to access sass maps and nested maps values easily.
 
 ## [Mixins](https://sass-lang.com/documentation/at-rules/mixin)
 

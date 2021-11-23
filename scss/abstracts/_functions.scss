@@ -1,7 +1,7 @@
 // ================================== //
 // Access nested variable maps values //
 // ================================== //
-@function var($variable, $keys...) {
+@function ss-var($variable, $keys...) {
     $value: $variable;
 
     @each $key in $keys {

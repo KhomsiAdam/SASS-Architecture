@@ -1,3 +1,17 @@
+/* ============================== */
+/* Export variables to JavaScript */
+/* ============================== */
+/* Load the SASS variables that you want into the body::after's content into a JSON format to be converted to a JS object */
+body.load-variables::after {
+  position: absolute;
+  visibility: hidden;
+  font-size: 0;
+  z-index: -1;
+  /* Name the object keys the names you want to use in JavaScript, access the variables values with the ss-var() function with interpolation */
+  /* To format the CSS content property in a readable format, the use of a backlash '\' at the end of each line make it possible to break strings */
+  content: '{                "colors": {                    "p_blue": "#2b777d",                    "s_darkblue": "#2b365a",                    "s_lightblue": "#5fbebc",                    "n_black": "#000000",                    "n_darkgray": "#343434",                    "n_gray": "#837f7f",                    "n_lightgray": "#f7f7f7",                    "n_white": "#ffffff"                },                "font_weight": {                    "thin": "100",                    "extralight": "200",                    "light": "300",                    "regular": "400",                    "medium": "500",                    "semibold": "600",                    "bold": "700",                    "extrabold": "800",                    "blackbold": "900"                },                "breakpoints": {                    "320": "320px",                    "360": "360px",                    "375": "375px",                    "425": "425px",                    "768": "768px",                    "800": "800px",                    "900": "900px",                    "1024": "1024px",                    "1280": "1280px",                    "1366": "1366px",                    "1440": "1440px",                    "1600": "1600px",                    "1680": "1680px",                    "1920": "1920px",                    "2560": "2560px"                }            }';
+}
+
 /* ========= */
 /* Font Face */
 /* ========= */
@@ -373,12 +387,12 @@ select {
   width: 90%;
   max-width: 1920px;
 }
-@media only screen and (min-width: 768) {
+@media only screen and (min-width: 1920px) {
   .ss-container {
     width: 85%;
   }
 }
-@media only screen and (min-width: 1024) {
+@media only screen and (min-width: 2560px) {
   .ss-container {
     width: 70%;
   }
@@ -508,14 +522,6 @@ select {
 }
 .ss-table-inspacing tr > td {
   border-top-width: 5px;
-}
-
-body.load-variables::after {
-  position: absolute;
-  visibility: hidden;
-  font-size: 0;
-  z-index: -1;
-  content: '{                "colors": {                    "p_green": "#008f70",                    "p_blue": "#2b777d",                    "s_yellow": "#bebe5f",                    "s_red": "#c94242",                    "n_black": "#000000",                    "n_darkgray": "#343434",                    "n_gray": "#837f7f",                    "n_lightgray": "#f7f7f7",                    "n_white": "#ffffff"                },                "font_weight": {                    "thin": "100",                    "extralight": "200",                    "light": "300",                    "regular": "400",                    "medium": "500",                    "semibold": "600",                    "bold": "700",                    "extrabold": "800",                    "blackbold": "900"                },                "breakpoints": {                    "320": "320px",                    "360": "360px",                    "375": "375px",                    "425": "425px",                    "768": "768px",                    "800": "800px",                    "900": "900px",                    "1024": "1024px",                    "1280": "1280px",                    "1366": "1366px",                    "1440": "1440px",                    "1600": "1600px",                    "1680": "1680px",                    "1920": "1920px",                    "2560": "2560px"                }            }';
 }
 
 /* ======== */
